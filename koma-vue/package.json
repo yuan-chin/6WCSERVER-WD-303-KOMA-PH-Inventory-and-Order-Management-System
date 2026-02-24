@@ -1,0 +1,21 @@
+{
+  "name": "koma-vue",
+  "version": "1.0.0",
+  "description": "A Vue.js application for KOMA PH, featuring a shop and checkout process.",
+  "main": "src/main.js",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^2.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

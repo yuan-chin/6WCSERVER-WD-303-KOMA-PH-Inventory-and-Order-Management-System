@@ -1,0 +1,41 @@
+const userSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  gender: String,
+  dob: String,
+  address: String,
+  contact: String,
+  email: String,
+  username: String,
+  password: String, // will be hashed
+  isAdmin: { type: Boolean, default: false }, // New field for admin
+  wishlist: [
+    {
+      productId: String,
+      name: String,
+      image: String,
+      price: Number,
+      addedAt: { type: Date, default: Date.now }
+    }
+  ],
+  orders: [
+    {
+      orderId: String,
+      item: String,
+      status: String,
+      date: { type: Date, default: Date.now },
+      meta: mongoose.Schema.Types.Mixed
+    }
+  ],
+  cart: [
+    {
+      cartId: { type: String, required: true },
+      productId: String,
+      name: String,
+      image: String,
+      price: Number,
+      quantity: { type: Number, default: 1 },
+      addedAt: { type: Date, default: Date.now }
+    }
+  ]
+});

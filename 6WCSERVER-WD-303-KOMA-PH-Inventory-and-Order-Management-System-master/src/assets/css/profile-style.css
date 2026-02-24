@@ -1,0 +1,422 @@
+/* --- FONT AWESOME (icons) --- */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/* --- GOOGLE FONT --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+
+/* --- GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =====================================
+   PAGE LAYOUT
+   ===================================== */
+.wishlist-page {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg) 50%, #DBCCBF 50%);
+  align-items: flex-start;
+  padding: 36px;
+  gap: 28px;
+}
+
+/* =====================================
+   SIDEBAR
+   ===================================== */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0f1724 0%, #111827 100%);
+  color: #e6eaf0;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logo-link {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.koma-logo-img {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* --- NAVIGATION --- */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.main-nav a {
+  color: rgba(230, 234, 240, 0.9);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.18s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateX(6px);
+}
+
+.main-nav li.active a,
+.main-nav a.router-link-active {
+  background: linear-gradient(90deg, #dce34d 0%, #b8c13a 100%);
+  color: #0b0b00;
+}
+
+/* --- LOGOUT BUTTON --- */
+.logout-btn {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =====================================
+   CONTENT AREA
+   ===================================== */
+.content {
+  flex: 1;
+  background: transparent;
+}
+
+/* --- HEADER --- */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.user-block {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.user-avatar-small {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #dce34d, #9fbf29);
+  box-shadow: 0 6px 18px rgba(44, 56, 77, 0.12);
+}
+
+.user-info .title {
+  font-size: 22px;
+  color: #0f1724;
+  font-weight: 700;
+}
+
+.user-info .subtitle {
+  font-size: 13px;
+  color: #7a7a86;
+  margin-top: 6px;
+}
+
+/* --- ACTION BUTTONS --- */
+.actions .btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.primary {
+  padding: 10px 16px;
+  background: #0f1724;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 18px rgba(15, 23, 36, 0.06);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   GRID & EMPTY STATE
+   ===================================== */
+.wishlist-grid .empty-state {
+  text-align: center;
+  padding: 48px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.empty-illustration {
+  width: 120px;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #0f1724;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #7a7a86;
+  margin-bottom: 14px;
+}
+
+/* =====================================
+   PRODUCT CARDS
+   ===================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card-media {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-name {
+  font-size: 15px;
+  color: #0f1724;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.price {
+  color: #0f1724;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* --- CARD BUTTONS --- */
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ensure icons are visible and centered */
+.btn.add,
+.btn.remove {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.06);
+  transition: all 0.18s ease;
+  font-size: 16px; /* icon size */
+}
+
+.btn.add i,
+.btn.remove i { line-height: 1; }
+
+/* hover states */
+.btn.add:hover {
+  background: #dce34d;
+  color: #0b0b00;
+  transform: scale(1.04);
+}
+
+.btn.remove {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn.remove:hover {
+  transform: scale(1.04);
+}
+
+/* ===== Profile edit form styles ===== */
+.card form input,
+.card form textarea,
+.card form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  color: #0f1724;
+  transition: box-shadow .15s ease, border-color .15s ease, transform .08s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.card form textarea { min-height: 90px; resize: vertical; }
+
+.card form input:focus,
+.card form textarea:focus,
+.card form select:focus {
+  outline: none;
+  border-color: #dce34d;
+  box-shadow: 0 6px 18px rgba(220,227,77,0.12);
+}
+
+.card form .btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,23,36,0.06);
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;
+  transition: transform .08s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.card form .btn.primary {
+  background: #0f1724;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 18px rgba(15,23,36,0.06);
+}
+
+.card form .btn:disabled,
+.card form .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* action group alignment inside form */
+.card form .form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* subtle validation styles (use by adding .invalid class conditionally) */
+.card form input.invalid,
+.card form textarea.invalid,
+.card form select.invalid {
+  border-color: #fca5a5;
+  box-shadow: 0 6px 18px rgba(252,165,165,0.08);
+}
+
+/* header edit buttons */
+.card > div[style] > h3 { margin: 0; }
+.card > div[style] > div .btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* responsive: single-column form on small screens */
+@media (max-width: 900px) {
+  .card form {
+    grid-template-columns: 1fr !important;
+  }
+  .card form .form-actions {
+    justify-content: stretch;
+    gap: 10px;
+  }
+  .card form .form-actions .btn {
+    flex: 1;
+  }
+}
+
+/* small polish for saved message or notice (if used) */
+.profile-saved {
+  display: inline-block;
+  margin-left: 12px;
+  color: #0b0b00;
+  background: #dce34d;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+@media (max-width: 900px) {
+  .wishlist-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .content {
+    margin-top: 12px;
+  }
+
+  .card-media {
+    height: 160px;
+  }
+}

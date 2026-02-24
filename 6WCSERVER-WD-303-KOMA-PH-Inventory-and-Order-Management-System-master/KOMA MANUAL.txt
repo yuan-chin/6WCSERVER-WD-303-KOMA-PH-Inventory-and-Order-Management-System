@@ -1,0 +1,23 @@
+Open in VS CODE direct folder to the Koma file.
+
+Open Terminal (IN VSCODE): 
+Type:
+npm run dev
+to run the website
+
+Open Another Terminal (IN VSCODE):
+Type:
+cd backend
+
+Type:
+node server.js
+To Connect the website to mongoose or mongodb
+
+
+Now Open MongoDB Compass:
+Connect then create new Database.
+Name the Database to:
+koma_db
+
+Name the Collection to:
+users
